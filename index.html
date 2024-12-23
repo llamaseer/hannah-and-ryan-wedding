@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannah & Ryan's Wedding Invitation</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHq6k5Pi1pL6rvNfS+P2TF1h8Y8nAPvc2+e1VbBIR1E+6p3o+pQ+m2iXdZ4F5H2f3yVzjE8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #fffaf0;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://www.transparenttextures.com/patterns/linen.png');
+        }
+        .invitation-card {
+            max-width: 700px;
+            margin: auto;
+            background-color: #ffffff;
+            border: 2px solid #d4a373;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 2s ease-in-out;
+        }
+        /* Decorative Floral Borders */
+        .floral-top, .floral-bottom {
+            position: absolute;
+            width: 100%;
+            height: 60px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .floral-top {
+            top: 0;
+            left: 0;
+            /* Replace with actual floral pattern */
+            background-image: url('https://www.transparenttextures.com/patterns/floral-top.png');
+        }
+        .floral-bottom {
+            bottom: 0;
+            left: 0;
+            /* Replace with actual floral pattern */
+            background-image: url('https://www.transparenttextures.com/patterns/floral-bottom.png');
+        }
+        .invitation-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .invitation-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            color: #8d5524;
+            margin: 0;
+        }
+        .invitation-header .couple-names {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+            color: #d4a373;
+            margin-top: -10px;
+        }
+        .invitation-body {
+            text-align: center;
+            line-height: 1.8;
+            color: #5a3e36;
+        }
+        .invitation-body p {
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        .invitation-details {
+            margin: 40px 0;
+            padding: 25px;
+            background-color: #fef5e7;
+            border-radius: 15px;
+            border: 1px solid #e3cbb1;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+        }
+        .invitation-details h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #8d5524;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .invitation-details h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #d4a373;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+        .invitation-details p {
+            font-size: 1.1em;
+            color: #5a3e36;
+            margin: 10px 0;
+        }
+        .invitation-footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1em;
+            color: #8d5524;
+        }
+        .invitation-footer a {
+            color: #d4a373;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .invitation-footer a:hover {
+            text-decoration: underline;
+        }
+        .rsvp-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #8d5524; /* Darker background for better contrast */
+            color: #ffffff; /* White text for visibility */
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .rsvp-button:hover {
+            background-color: #6c3e1f; /* Even darker on hover */
+            color: #ffffff; /* Maintain white text on hover */
+        }
+        @media (max-width: 768px) {
+            .invitation-card {
+                padding: 40px 30px;
+            }
+            .invitation-header h1 {
+                font-size: 2.5em;
+            }
+            .invitation-header .couple-names {
+                font-size: 1.8em;
+            }
+            .invitation-body p {
+                font-size: 1.1em;
+            }
+            .invitation-details h2 {
+                font-size: 1.6em;
+            }
+            .invitation-details p {
+                font-size: 1em;
+            }
+        }
+        @media (max-width: 480px) {
+            .invitation-card {
+                padding: 30px 20px;
+            }
+            .invitation-header h1 {
+                font-size: 2em;
+            }
+            .invitation-header .couple-names {
+                font-size: 1.5em;
+            }
+            .invitation-body p {
+                font-size: 1em;
+            }
+            .invitation-details h2 {
+                font-size: 1.4em;
+            }
+            .invitation-details p {
+                font-size: 0.95em;
+            }
+        }
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation-card">
+        <div class="floral-top"></div>
+        <div class="invitation-header">
+            <h1>Hannah & Ryan</h1>
+            <div class="couple-names">Together with their families</div>
+        </div>
+        <div class="invitation-body">
+            <p>joyfully invite you to share in their happiness as they unite in marriage.</p>
+        </div>
+        <div class="invitation-details">
+            <h2>Wedding Ceremony</h2>
+            <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> Friday, December 27, 2024</p>
+            <p><i class="fas fa-clock"></i> <strong>Time:</strong> 3:00 PM</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Eastern Hills Baptist Church</p>
+            <p>3100 Morris St NE, Albuquerque, NM</p>
+            
+            <h2>Reception</h2>
+            <p><i class="fas fa-utensils"></i> <strong>Time:</strong> 4:30 PM</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Venue:</strong> Herencia</p>
+            <p>11225 Montgomery Blvd NE, Ste D, Albuquerque, NM</p>
+            
+            <h2>Dress Code</h2>
+            <p>Formal attire for the bride and groom; any attire welcome for guests.</p>
+        </div>
+        <div class="invitation-footer">
+            <p>Please RSVP by <strong>December 22, 2024</strong></p>
+            <p>Contact us at <a href="mailto:hannahandryan@example.com">hannahandryan@example.com</a> or call/text <a href="tel:+15052206309">505-220-6309</a></p>
+            <a href="mailto:hannahandryan@example.com" class="rsvp-button">RSVP Now</a>
+            <p>We look forward to celebrating with you!</p>
+        </div>
+        <div class="floral-bottom"></div>
+    </div>
+</body>
+</html>
+
