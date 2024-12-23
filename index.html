@@ -39,13 +39,13 @@
         .floral-top {
             top: 0;
             left: 0;
-            /* Replace with actual floral pattern */
+            /* Replace with actual floral pattern or remove if not needed */
             background-image: url('https://www.transparenttextures.com/patterns/floral-top.png');
         }
         .floral-bottom {
             bottom: 0;
             left: 0;
-            /* Replace with actual floral pattern */
+            /* Replace with actual floral pattern or remove if not needed */
             background-image: url('https://www.transparenttextures.com/patterns/floral-bottom.png');
         }
         .invitation-header {
@@ -257,7 +257,7 @@
         </div>
         <div class="rsvp-form">
             <h2>RSVP</h2>
-            <form name="rsvp" method="POST" data-netlify="true">
+            <form name="rsvp" netlify netlify-honeypot="bot-field" method="POST" action="/thank-you.html">
                 <!-- Honeypot for spam prevention -->
                 <input type="hidden" name="form-name" value="rsvp">
                 <p style="display:none;">
@@ -288,8 +288,6 @@
         </div>
         <div class="invitation-footer">
             <p>Please RSVP by <strong>December 26, 2024</strong></p>
-            <p>Contact us by call/text <a href="tel:+15052206309">505-220-6309</a></p>
-            <!-- Removed duplicate RSVP button -->
             <p>We look forward to celebrating with you!</p>
         </div>
         <div class="floral-bottom"></div>
