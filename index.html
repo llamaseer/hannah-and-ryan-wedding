@@ -228,6 +228,26 @@
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        /* Print Stylesheet */
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+            }
+            .invitation-card {
+                box-shadow: none;
+                border: 2px solid #d4a373;
+            }
+            .floral-top, .floral-bottom {
+                display: none;
+            }
+            .rsvp-form button {
+                display: none;
+            }
+            .invitation-footer {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -238,7 +258,7 @@
             <div class="couple-names">Together with their families</div>
         </div>
         <div class="invitation-body">
-            <p>joyfully invite you to share in their happiness as they unite in marriage.</p>
+            <p>joyfully invite you to share in their happiness as they unite before God.</p>
         </div>
         <div class="invitation-details">
             <h2>Wedding Ceremony</h2>
@@ -272,7 +292,7 @@
                 
                 <label for="attend">Will you attend?</label>
                 <select id="attend" name="attend" required>
-                    <option value="">--Please choose an option--</option>
+                    <option value="">--Choose an option--</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
@@ -280,8 +300,8 @@
                 <label for="guests">Number of Guests</label>
                 <input type="number" id="guests" name="guests" min="1" max="10" value="1" required>
                 
-                <label for="food">Food Preference (Please specify your choice from our menu <a href="https://laherenciagrill.com/midwest-city-midwest-city-la-herencia-mexican-grill-food-menu" target="_blank">here</a>)</label>
-                <textarea id="food" name="food" placeholder="Please enter your food selection"></textarea>
+                <label for="food">Food and Dessert Preference (specify your choice(s) from the menu <a href="https://laherenciagrill.com/midwest-city-midwest-city-la-herencia-mexican-grill-food-menu" target="_blank">here</a>)</label>
+                <textarea id="food" name="food" placeholder="Your food choice and any special instructions"></textarea>
                 
                 <button type="submit">Submit RSVP</button>
             </form>
